@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
+    integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>jot</title>
+</head>
+
+<body>
+  <!-- SECTION -->
+  <header>
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+      <a class="navbar-brand ms-3" href="#">
+        <span class="ms-5 header-text">
+          <i class="mdi mdi-unicorn-variant"></i>
+          <i class="mdi mdi-alpha-j-circle-outline mt-1"></i>
+          <i class="mdi mdi-alpha-o-circle-outline mb-1"></i>
+          <i class="mdi mdi-alpha-t-circle-outline mt-1"></i>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION -->
+  <main id="router-view">
+    <!-- PRIMARY VIEWPORT -->
+  </main>
+
+  <!-- <div class="container-fluid">
+    <section class="row">
+      <div class="col-4">
+        <p class="fs-3">Jots: 0</p>
+        <p class="fs-4">Type of Note, color</p>
+        <p class="fs-4">Type of note, color</p>
+      </div>
+    </section>
+  </div> -->
+
+  <!-- //SECTION - Active Note Section -->
+
+  <div class="container-fluid">
+
+    <!-- <section class="row">
+      <div class="col-10">
+        <div class="row ">
+          <div class="col-3 bg-secondary">
+            <p class="fs-1">ACTIVE NOTE</p>
+            <p class="fs-2">Type of Note here</p>
+            <p class="fs-5">Date Created here</p>
+            <p class="fs-5">Date last edited here</p>
+          </div>
+          <div class="col-7 bg-white">
+            <form class="p-5" onsubmit="saveActiveNote()">
+              <label for="active-note"></label>
+              <textarea cols="80%" rows="20%" name="active-note"></textarea>
+            </form>
+          </div>
+          <div class="col-2 bg-secondary">
+            <button class="btn btn-danger" onsubmit="deleteNote()">Delete <i class="mdi mdi-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+  </div>
+
+  <!-- //SECTION - new note section -->
+
+  <div class="container-fluid p-4">
+    <section class="row ">
+
+      <div class="col-12 col-md-3 ">
+        <form class="p-4" onsubmit="app.NotesController.createNote()" class="row align-items-end">
+          <div class="col-12 col-md-8">
+            <p class="fs-3">New Note</p>
+            <div class="p-2">
+              <label id="noteTitle" for="note-title">Note Title</label>
+              <input id="note-title" type="text" name="title" minlength="3" maxlength="15" required>
+            </div>
+            <div class="p-2">
+              <label id="typeNote" for="type-note">Note Type</label>
+              <input id="type-note" type="text" name="type" minlength="3" maxlength="15" required>
+              <label for="noteColor"></label>
+              <input type="color" id="noteColor" name="color" value="#6FBAD3" required>
+            </div>
+
+          </div>
+          <div>
+            <button class="btn btn-primary px-5 mt-2"><i class="mdi mdi-check-circle"></i></button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </div>
+
+
+  <!-- <div class="card">
+          <div class="card-body text-center d-flex justify-content-center align-items-center flex-column">
+            <p>Click the dark square to activate the Color Picker</p>
+            <div id="color-picker-1" class="mx-auto"></div>
+          </div>
+        </div> -->
+  <!-- this aint workin
+
+
+
+
+
+
+
+  <!-- SECTION -->
+  <footer class="bg-dark text-light">
+    <div class="text-center no-select">
+      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/App.js" type="module"></script>
+
+</body>
+
+</html>
