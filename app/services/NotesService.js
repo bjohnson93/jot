@@ -1,6 +1,7 @@
 import { AppState } from "../AppState.js";
 import { Note } from "../models/Note.js";
 import { saveState } from "../utils/Store.js";
+import { setHTML } from "../utils/Writer.js";
 
 function _saveState() {
   saveState('notes', AppState.notes)
@@ -17,7 +18,6 @@ class NotesService {
     AppState.emit('notes')
     AppState.emit('activeNote')
     console.log(AppState.notes);
-
     _saveState()
   }
   selectActiveNote(noteId) {
@@ -49,8 +49,10 @@ class NotesService {
     //then you splice (remove at that index, 1 object)
     AppState.notes.splice(noteIndex, 1)
     //then save it in place
-    _saveState()
     AppState.emit('notes')
+    AppState.emit('activeNote')
+    setHTML('active-note')
+    _saveState()
   }
 
 }

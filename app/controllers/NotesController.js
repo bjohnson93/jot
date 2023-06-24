@@ -44,6 +44,7 @@ export class NotesController {
     // console.log('yo the create button note works!');
     let noteData = getFormData(form)
     console.log(noteData);
+    form.reset()
     notesService.createNote(noteData)
   }
 

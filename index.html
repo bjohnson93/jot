@@ -12,6 +12,12 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>jot</title>
@@ -20,15 +26,21 @@
 <body>
   <!-- SECTION -->
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <nav class="navbar navbar-dark navbar-expand head-foot text-light no-select">
       <a class="navbar-brand ms-3" href="#">
         <span class="ms-5 header-text">
-          <i class="mdi mdi-unicorn-variant"></i>
-          <i class="mdi mdi-alpha-j-circle-outline mt-1"></i>
-          <i class="mdi mdi-alpha-o-circle-outline mb-1"></i>
-          <i class="mdi mdi-alpha-t-circle-outline mt-1"></i>
+          <i class="mdi mdi-unicorn"></i>
+
+          <i class="mdi mdi-alpha-j-circle-outline "></i>
+          <i class="mdi mdi-alpha-o-circle-outline "></i>
+          <i class="mdi mdi-alpha-t-circle-outline "></i>
         </span>
       </a>
+      <marquee class="m-1 fs-3" direction="down" width="1000" height="100" behavior="alternate">
+        <marquee behavior="alternate" direction="right"> <i class="mdi mdi-unicorn"></i>
+        </marquee>
+
+      </marquee>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -84,35 +96,37 @@
 
   </div>
 
+
+
   <!-- //SECTION - new note section -->
 
-  <div class="container-fluid p-4">
-    <section class="row ">
+  <!-- <div class="container"> -->
+  <!-- <section class="row "> -->
 
-      <div class="col-12 col-md-3 ">
-        <form class="p-4" onsubmit="app.NotesController.createNote()" class="row align-items-end">
-          <div class="col-12 col-md-8">
-            <p class="fs-3">New Note</p>
-            <div class="p-2">
-              <label id="noteTitle" for="note-title">Note Title</label>
-              <input id="note-title" type="text" name="title" minlength="3" maxlength="15" required>
-            </div>
-            <div class="p-2">
-              <label id="typeNote" for="type-note">Note Type</label>
-              <input id="type-note" type="text" name="type" minlength="3" maxlength="15" required>
-              <label for="noteColor"></label>
-              <input type="color" id="noteColor" name="color" value="#6FBAD3" required>
-            </div>
-
-          </div>
-          <div>
-            <button class="btn btn-primary px-5 mt-2"><i class="mdi mdi-check-circle"></i></button>
-          </div>
-        </form>
+  <!-- <div class="col-12 col-md-3 "> -->
+  <form class="p-4" onsubmit="app.NotesController.createNote()" class="row align-items-end">
+    <div class="col-12 col-md-3">
+      <p class="fs-3">New Note</p>
+      <div class="p-2">
+        <label id="noteTitle" for="note-title">Note Title</label>
+        <input id="note-title" type="text" name="title" minlength="3" maxlength="15" required>
+      </div>
+      <div class="p-2">
+        <label id="typeNote" for="type-note">Note Type</label>
+        <input id="type-note" type="text" name="type" minlength="3" maxlength="15" required>
+        <label for="noteColor"></label>
+        <input type="color" id="noteColor" name="color" value="#6FBAD3" required>
       </div>
 
-    </section>
-  </div>
+    </div>
+    <div>
+      <button class="btn button px-5 mt-2"><i class="mdi mdi-check-circle"></i></button>
+    </div>
+  </form>
+  <!-- </div>
+
+  </section>
+  </div> -->
 
 
   <!-- <div class="card">
@@ -130,9 +144,9 @@
 
 
   <!-- SECTION -->
-  <footer class="bg-dark text-light">
+  <footer class="head-foot text-light">
     <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
+      <p class="mb-0 fs-5"><small>Made with <i class="mdi mdi-heart-outline"> </i> by Bailey</small></p>
     </div>
   </footer>
 

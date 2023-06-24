@@ -1,4 +1,62 @@
 /* BASIC STYLES HERE */
+body {
+  font-family: 'Ysabeau SC', sans-serif;
+}
+
+
+
+
 .header-text {
   font-size: 90px;
+}
+
+
+.head-foot {
+  background-color: #f89dd5;
+  animation-name: head-foot-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  text-shadow: 1px 3px 3px rgb(49, 47, 47);
+}
+
+.button {
+  background-color: #5b4751;
+  animation-name: button-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  text-shadow: 1px 3px 3px rgb(155, 159, 163);
+  color: whitesmoke;
+
+}
+
+@keyframes button-animation {
+  from {
+    background-color: #655e5e;
+  }
+
+  to {
+    background-color: #61595d;
+  }
+}
+
+@keyframes head-foot-animation {
+  from {
+    background-color: #c676eb;
+  }
+
+
+  to {
+    background-color: #d8eb76;
+  }
+
+  from {
+    background-color: #72c1e8;
+  }
+
+  to {
+    background-color: #f588c4;
+  }
 }
