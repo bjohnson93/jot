@@ -27,7 +27,7 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  text-shadow: 1px 3px 3px rgb(155, 159, 163);
+  text-shadow: 1px 3px 3px rgb(247, 130, 221);
   color: whitesmoke;
 
 }
@@ -38,7 +38,7 @@ body {
   }
 
   to {
-    background-color: #61595d;
+    background-color: #4e4376;
   }
 }
 
