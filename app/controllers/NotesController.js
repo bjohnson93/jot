@@ -54,8 +54,8 @@ export class NotesController {
   }
 
   saveActiveNote() {
-    event?.preventDefault()
-    const form = event?.target
+    event.preventDefault()
+    const form = event.target
     let noteScript = getFormData(form)
     // console.log('here is the note', theNote);
     console.log('here is noteScript from the controller:', noteScript);
