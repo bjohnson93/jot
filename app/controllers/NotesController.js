@@ -20,9 +20,11 @@ function _drawListOfNotes() {
 function _drawActiveNote() {
   const activeNote = AppState.activeNote
   // console.log('heres a hello from the actives', activeNote);
+
   if (activeNote) {
     setHTML('active-note', activeNote.ActiveNoteTemplate)
   } else {
+    setHTML('active-note', '<div>Why not create a note...</div>')
     return
   }
 }

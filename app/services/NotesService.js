@@ -16,13 +16,19 @@ class NotesService {
     console.log(newNote, 'here is the new note');
     AppState.notes.push(newNote)
     AppState.emit('notes')
+    AppState.activeNote = newNote
     AppState.emit('activeNote')
     console.log(AppState.notes);
     _saveState()
+    return
   }
   selectActiveNote(noteId) {
     const selectedNote = AppState.notes.find(n => n.id == noteId)
     // console.log('here is the selected note, now in service', selectedNote);
+    if (!selectedNote) {
+      return
+    }
+    //null check that helps get rid of red squiggle below
     AppState.activeNote = selectedNote
     // console.log('active note', AppState.activeNote);
 
@@ -50,8 +56,8 @@ class NotesService {
     AppState.notes.splice(noteIndex, 1)
     //then save it in place
     AppState.emit('notes')
+    AppState.activeNote = null
     AppState.emit('activeNote')
-    setHTML('active-note')
     _saveState()
   }
 

@@ -23,6 +23,7 @@ class ObservableAppState extends EventEmitter {
     })
   ]
 
+  /** @type {import('./models/Note.js').Note | null} */
   activeNote = null
 
   init() {
