@@ -10,7 +10,7 @@ function _saveState() {
 
 class NotesService {
   createNote(noteData) {
-    // console.log('yo now we got the data to the svc, good job', noteData);
+    // console.log('hey now we got the data to the svc, good job', noteData);
     // debugger
     const newNote = new Note(noteData)
     console.log(newNote, 'here is the new note');
@@ -58,3 +58,4 @@ class NotesService {
 }
 
 export const notesService = new NotesService()
+

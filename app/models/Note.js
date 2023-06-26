@@ -6,7 +6,7 @@ export class Note {
 
   constructor(data) {
     this.id = generateId()
-    this.description = data.description
+    this.description = data.description || 'Write your thoughts here'
     this.type = data.type
     this.color = data.color
     this.title = data.title
